@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinators in CSS</title>
+    <style>
+
+        #adjacent {
+            background-color: yellow;
+        }
+        #adjacent h1 + p {
+            color: green;
+        }
+        #genral {
+            background-color: aqua;
+        }
+        #genral h1 ~ p {
+            color: red;
+        }
+
+        .child-parent > div {
+            background-color: lightgray;
+            padding: 10px;
+        }
+        .child-parent > div > div {
+            color: aqua;
+            font-weight: bold;
+        }
+
+        #adjacent p {
+            font-weight: bold;
+        }
+        #genral p {
+            font-style: italic;
+        }
+        div {
+            background-color: green;
+        }
+        div > div {
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div id="adjacent">
+        <h1>Example of Adjacent Sibling (+) Combinator</h1>
+        <p>This paragraph is adjacent to h1 (styled in green).</p>
+        <p>This is the second paragraph.</p>
+        <p>This is the third paragraph.</p>
+    </div>
+    <div id="genral">
+        <h1>Example of General Sibling (~) Combinator</h1>
+        <p>This paragraph is a general sibling of h1 (styled in red).</p>
+        <div>
+            <h6>Inside another div (not affected by ~).</h6>
+        </div>
+        <p>Hello world</p>
+        <h6>The second heading</h6>
+        <h6>The third heading</h6>
+        <p>This is another paragraph.</p>
+    </div>
+    <div class="child-parent">
+        <h1>Example of Child (>) Combinator</h1>
+        <div>
+            <h1>This is the first inner div.</h1>
+            <div>This is the second inner div.</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2</title>
+    <style>
+        td,table{
+            border: 2px solid rgba(96, 4, 4, 0.61);
+            border-collapse: collapse;
+            background-color: rgb(246, 212, 186);
+        }
+        th{
+            color:rgb(39, 164, 164);
+        }
+
+        .heads{
+            background-color: thistle;
+        }
+
+        #bottom {
+            background-color: rgb(13, 114, 104);
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>Assignment 2 - Table</caption>
+        <thead>
+            <tr>
+                <th class="heads">Item </th>
+                <th class="heads">Quantity</th>
+                <th class="heads">Unit Price</th>
+                <th class="heads">Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Pencils</td>
+                <td>2</td>
+                <td>$1</td>
+                <td>$2</td>
+            </tr>
+            <tr>
+                <td>Erasers</td>
+                <td>4</td>
+                <td rowspan="2" >$0.50</td>
+                <td>$2</td>
+            </tr>
+            <tr>
+                <td colspan="2">Subtotal</td>
+                <td>$4</td>
+            </tr>
+            <tr>
+                <td>Tax</td>
+                <td>10%</td>
+                <td colspan="2">$0.4</td>
+            </tr>
+        </tbody>
+        <tfoot >
+            <tr>
+                <td id="bottom"  colspan="4">footer of the table</td>
+            </tr>
+        </tfoot>
+    </table>
+    
+</body>
+</html>
