@@ -1,71 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Combinators in CSS</title>
-    <style>
-
-        #adjacent {
-            background-color: yellow;
-        }
-        #adjacent h1 + p {
-            color: green;
-        }
-        #genral {
-            background-color: aqua;
-        }
-        #genral h1 ~ p {
-            color: red;
-        }
-
-        .child-parent > div {
-            background-color: lightgray;
-            padding: 10px;
-        }
-        .child-parent > div > div {
-            color: aqua;
-            font-weight: bold;
-        }
-
-        #adjacent p {
-            font-weight: bold;
-        }
-        #genral p {
-            font-style: italic;
-        }
-        div {
-            background-color: green;
-        }
-        div > div {
-            color: aqua;
-        }
-    </style>
-</head>
-<body>
-    <div id="adjacent">
-        <h1>Example of Adjacent Sibling (+) Combinator</h1>
-        <p>This paragraph is adjacent to h1 (styled in green).</p>
-        <p>This is the second paragraph.</p>
-        <p>This is the third paragraph.</p>
-    </div>
-    <div id="genral">
-        <h1>Example of General Sibling (~) Combinator</h1>
-        <p>This paragraph is a general sibling of h1 (styled in red).</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 5 froms and formatting tags</title>
+  </head>
+  <body>
+     <div>
+        <div><h1>Image Tag </h1></div>
         <div>
-            <h6>Inside another div (not affected by ~).</h6>
+            <img alt="Qries" src="data:image/jpeg;base64,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">
         </div>
-        <p>Hello world</p>
-        <h6>The second heading</h6>
-        <h6>The third heading</h6>
-        <p>This is another paragraph.</p>
+     </div>
+    <div>
+      <h2><u>Phrasing and Formatting tags</u></h2>
+      <i>Itallic text </i> and <b> bold Text </b>
+      <p>
+        <small>This is a small text example.</small>
+        <mark>Highlighted text</mark>
+      </p>
+      <p><strong>Strong text</strong> and <em>emphasized text</em></p>
+      <p><del>Deleted text</del> and <ins>Inserted text</ins></p>
+      <p><sub>Subscript</sub> and <sup>Superscript</sup></p>
+      <blockquote>Blockquote example</blockquote>
+      <q>This is example of only Qoute</q>
+      <pre>Preformatted        text      example</pre>
+      <p>
+        <abbr title="HyperText Markup Language">HTML</abbr> is used for
+        structuring web pages.
+      </p>
     </div>
-    <div class="child-parent">
-        <h1>Example of Child (>) Combinator</h1>
+    <div>
+      <div><h1>Forms and Inputs</h1></div>
+      <form action="#">
+        <fieldset>
+            <legend>Personal Details</legend>
+            <div>
+                <div><label for="name">Name</label></div>
+                <div><input type="text" id="name" name="name" /></div>
+              </div>
+      
+              <div>
+                <div><label for="email">Email</label></div>
+                <div><input type="email" id="email" name="email" /></div>
+              </div>
+      
+              <div>
+                <div><label for="password">Password</label></div>
+                <div><input type="password" id="password" name="password" /></div>
+              </div>
+      
+              <div>
+                <div><label for="number">Age</label></div>
+                <div>
+                  <input type="number" id="number" name="number" min="1" max="100" />
+                </div>
+              </div>
+      
+              <div>
+                <div><label for="dob">Date of Birth</label></div>
+                <div><input type="date" id="dob" name="dob"  /></div>
+              </div>
+               
+              <div>
+                  <div><label for="time">Only time</label></div>
+                  <div><input type="time" name="type"></div>
+              </div>
+      
+              <div>
+                  <div><label for="portfolio">Url of your portfolio</label></div>
+                  <div><input type="url" name="portfolio"></div>
+              </div>
+              
+              <div>
+                  <div><label for="phn">Phone no</label></div>
+                  <div><input type="tel" name="phn"></div>
+              </div>
+      
+              <div>
+                <div><label>Gender</label></div>
+                <div>
+                  <input type="radio" id="male" name="gender" value="male" />
+                   <label for="male">Male</label>
+                </div>
+                <div>
+                  <input type="radio" id="female" name="gender" value="female" />
+                  <label for="female">Female</label>
+                </div>
+              </div>
+        </fieldset>
+
+
+    <fieldset>
+        <legend>Professional Details</legend>
+
         <div>
-            <h1>This is the first inner div.</h1>
-            <div>This is the second inner div.</div>
-        </div>
+            <div><label>Skills</label></div>
+            <div>
+              <input type="checkbox" id="html" name="skills" value="HTML" />
+              <label for="html">HTML</label>
+            </div>
+            <div>
+              <input type="checkbox" id="css" name="skills" value="CSS" />
+              <label for="css">CSS</label>
+            </div>
+            <div>
+              <input type="checkbox" id="js" name="skills" value="JavaScript" />
+              <label for="js">JavaScript</label>
+            </div>
+          </div>
+  
+          <div>
+            <div><label for="job">Job Role</label></div>
+            <div>
+              <select id="job" name="job">
+                  <option value="developer">Developer</option>
+                  <option value="designer">Designer</option>
+                  <option value="manager">Manager</option>
+                </select>
+            </div>
+          </div>
+  
+          <div>
+            <div>
+              <label for="description">Description of your Job</label>
+            </div>
+            <div>
+                  <textarea
+                  id="description"
+                  rows="5"
+                  cols="50"
+                  name="description"
+                  ></textarea>
+            </div>
+          </div>
+  
+          <div>
+            <div>
+              <label for="file">Upload Resume</label>
+            </div>
+            <div>
+              <input type="file" id="file" name="file" />
+            </div>
+          </div>
+  
+          <div>
+            <div>
+              <label for="color">Choose your favorite color</label>
+            </div>
+            <div>
+              <input type="color" id="color" name="color" value="#ff0000"/>
+            </div>
+          </div>
+          <div>
+              <div><label for="wh">Working hours</label></div>
+              <div>
+                  <input type="range" id="wh" name="wh" min="5" max="12" step="1" value="5">
+              </div>
+          </div> 
+  
+          <div>
+              <div> 
+                  <input type="submit" value="Submit" />
+              </div>
+              <div>
+                  <input type="reset" value="Reset" />
+              </div>
+          </div> 
+    </fieldset>      
+      </form>
     </div>
-</body>
+  </body>
 </html>

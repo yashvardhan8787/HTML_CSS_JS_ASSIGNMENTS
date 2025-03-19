@@ -20,16 +20,12 @@
           border-radius: 8px;
           margin: 20px;
           font-variant: initial;
-      
-
-          /* Added outline properties */
           outline: 5px auto blue;
           outline-offset: 10px;
         }
 
         #subheading {
           margin: 30px;
-          /* Outline for subheading */
           outline: 3px solid purple;
           outline-offset: 5px;
         }
@@ -37,7 +33,6 @@
         #links {
           margin: 30px;
           color: darkslategrey;
-          /* Outline for links section */
           outline: 2px dotted red;
           outline-offset: 8px;
         }
@@ -45,20 +40,53 @@
         a {
           text-decoration: none;
           font-weight: bold;
-          /* Adding outline to links */
           outline: 2px solid green;
           outline-offset: 4px;
         }
 
-        a:hover {
-          outline: 3px dashed orange;
-          outline-offset: 6px;
+
+        #heading > h1 {
+          font-size: 35px;
+          text-align: center;
+        }
+
+        #subheading + #links {
+          border: 2px solid black;
+          padding: 10px;
+        }
+
+        ul li {
+          margin: 10px 0;
+        }
+
+        ul > li:first-child {
+          font-style: italic;
+        }
+
+        ul > li:last-child a {
+          color: blue;
+        }
+
+        ul li:nth-child(odd) {
+          background-color: lightgray;
+        }
+
+        a[href^="/Assignment"] {
+          text-decoration: underline;
+        }
+
+        a[href$="2.html"] {
+          font-weight: normal;
+        }
+
+        a[href*="Assignment"] {
+          font-size: 18px;
         }
     </style>
   </head>
   <body>
     <div id="heading">
-      <h1 style="color:rgb(240, 11, 11);">Assignment 3</h1>
+      <h1 style="color:rgb(240, 11, 11);">Assignment 4</h1>
     </div>
     <div id="subheading">
       <h2>Link to the assignments</h2>
