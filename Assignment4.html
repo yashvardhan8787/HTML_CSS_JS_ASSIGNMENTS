@@ -19,9 +19,6 @@
           padding-bottom: 10px;
           border-radius: 8px;
           margin: 20px;
-          font-variant: initial;
-          outline: 5px auto blue;
-          outline-offset: 10px;
         }
 
         #subheading {
@@ -30,13 +27,13 @@
           outline-offset: 5px;
         }
 
-        #links {
-          margin: 30px;
-          color: darkslategrey;
-          outline: 2px dotted red;
-          outline-offset: 8px;
+        #links  ul {
+            background-color: rgb(38, 158, 232) ;
+            padding: 100px;
         }
-
+        ul > li{
+           color: yellow;
+        }
         a {
           text-decoration: none;
           font-weight: bold;
@@ -44,44 +41,19 @@
           outline-offset: 4px;
         }
 
-
         #heading > h1 {
           font-size: 35px;
-          text-align: center;
         }
 
         #subheading + #links {
           border: 2px solid black;
           padding: 10px;
         }
-
-        ul li {
-          margin: 10px 0;
+        
+        #genral ~ div{
+          background-color: yellowgreen;
         }
-
-        ul > li:first-child {
-          font-style: italic;
-        }
-
-        ul > li:last-child a {
-          color: blue;
-        }
-
-        ul li:nth-child(odd) {
-          background-color: lightgray;
-        }
-
-        a[href^="/Assignment"] {
-          text-decoration: underline;
-        }
-
-        a[href$="2.html"] {
-          font-weight: normal;
-        }
-
-        a[href*="Assignment"] {
-          font-size: 18px;
-        }
+     
     </style>
   </head>
   <body>
@@ -100,7 +72,23 @@
         <li>
           <a href="/Assignment2.html">Go to Assignment 2</a>
         </li>
+        <br>
+        <li>
+          <a href="/Assignment3.html">Go to Assignment 3</a>
+        </li>
       </ul>
     </div>
+
+     <div>
+        <div id="genral">
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, quia.</p>
+        </div>
+        <div>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, quia.</p>
+        </div>
+        <div>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, quia.</p>
+        </div>
+     </div>
   </body>
 </html>
