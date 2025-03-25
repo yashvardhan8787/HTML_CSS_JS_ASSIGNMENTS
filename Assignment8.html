@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment8</title>
+    <style>
+        #img-div {
+            height: 400px;
+            width: 600px;
+            background-color: rgb(132, 189, 189);
+            background-image: url("https://img.freepik.com/free-photo/futuristic-moon-background_23-2150930692.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #layered-div {
+            position: absolute;
+            top: 180px;
+            left: 80px;
+            height: 400px;
+            width: 600px;
+            background-color: rgb(22, 171, 171);
+            z-index: -1;
+        }
+        #layered-div p {
+                color: aliceblue;
+                position:absolute;
+                bottom: 0px;
+                font-size: 35px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Assignment 8</h1>
+
+      <div id="layered-div">
+        <P>This is a layered div ...</P>
+      </div>
+      <div id="img-div">
+      </div>
+</body>
+</html>
